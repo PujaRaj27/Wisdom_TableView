@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		879E870E29ED6BE7004D3F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E870D29ED6BE7004D3F4D /* AppDelegate.swift */; };
+		879E871029ED6BE7004D3F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E870F29ED6BE7004D3F4D /* SceneDelegate.swift */; };
+		879E871229ED6BE7004D3F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E871129ED6BE7004D3F4D /* ViewController.swift */; };
+		879E871529ED6BE7004D3F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E871329ED6BE7004D3F4D /* Main.storyboard */; };
+		879E871829ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 879E871629ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodeld */; };
+		879E871A29ED6BEB004D3F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879E871929ED6BEB004D3F4D /* Assets.xcassets */; };
+		879E871D29ED6BEB004D3F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E871B29ED6BEB004D3F4D /* LaunchScreen.storyboard */; };
+		879E872829ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E872729ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift */; };
+		879E873229ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E873129ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift */; };
+		879E873429ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E873329ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift */; };
+		879E874929EDAF63004D3F4D /* CustomLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */; };
+		879E874B29EDAF76004D3F4D /* CustomLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */; };
+		879E874D29EDB84D004D3F4D /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E874C29EDB84D004D3F4D /* TableVC.swift */; };
+		879E874F29EDB85F004D3F4D /* TableVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E874E29EDB85F004D3F4D /* TableVC.storyboard */; };
+		879E875229EE5A75004D3F4D /* descTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E875029EE5A75004D3F4D /* descTableViewCell.swift */; };
+		879E875329EE5A76004D3F4D /* descTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879E875129EE5A75004D3F4D /* descTableViewCell.xib */; };
+		879E875529EE5EDB004D3F4D /* DescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E875429EE5EDB004D3F4D /* DescriptionModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		879E872429ED6BEC004D3F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879E870229ED6BE7004D3F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879E870929ED6BE7004D3F4D;
+			remoteInfo = TableViewWithCheckbox;
+		};
+		879E872E29ED6BEC004D3F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879E870229ED6BE7004D3F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879E870929ED6BE7004D3F4D;
+			remoteInfo = TableViewWithCheckbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		879E870A29ED6BE7004D3F4D /* TableViewWithCheckbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewWithCheckbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		879E870D29ED6BE7004D3F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		879E870F29ED6BE7004D3F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		879E871129ED6BE7004D3F4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		879E871429ED6BE7004D3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		879E871729ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableViewWithCheckbox.xcdatamodel; sourceTree = "<group>"; };
+		879E871929ED6BEB004D3F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		879E871C29ED6BEB004D3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		879E871E29ED6BEB004D3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879E872329ED6BEC004D3F4D /* TableViewWithCheckboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewWithCheckboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		879E872729ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCheckboxTests.swift; sourceTree = "<group>"; };
+		879E872D29ED6BEC004D3F4D /* TableViewWithCheckboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewWithCheckboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		879E873129ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCheckboxUITests.swift; sourceTree = "<group>"; };
+		879E873329ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCheckboxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLaunchScreen.swift; sourceTree = "<group>"; };
+		879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomLaunchScreen.storyboard; sourceTree = "<group>"; };
+		879E874C29EDB84D004D3F4D /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		879E874E29EDB85F004D3F4D /* TableVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableVC.storyboard; sourceTree = "<group>"; };
+		879E875029EE5A75004D3F4D /* descTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descTableViewCell.swift; sourceTree = "<group>"; };
+		879E875129EE5A75004D3F4D /* descTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descTableViewCell.xib; sourceTree = "<group>"; };
+		879E875429EE5EDB004D3F4D /* DescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		879E870729ED6BE7004D3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E872029ED6BEC004D3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E872A29ED6BEC004D3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		879E870129ED6BE7004D3F4D = {
+			isa = PBXGroup;
+			children = (
+				879E875429EE5EDB004D3F4D /* DescriptionModel.swift */,
+				879E875029EE5A75004D3F4D /* descTableViewCell.swift */,
+				879E875129EE5A75004D3F4D /* descTableViewCell.xib */,
+				879E874E29EDB85F004D3F4D /* TableVC.storyboard */,
+				879E874C29EDB84D004D3F4D /* TableVC.swift */,
+				879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */,
+				879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */,
+				879E870C29ED6BE7004D3F4D /* TableViewWithCheckbox */,
+				879E872629ED6BEC004D3F4D /* TableViewWithCheckboxTests */,
+				879E873029ED6BEC004D3F4D /* TableViewWithCheckboxUITests */,
+				879E870B29ED6BE7004D3F4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		879E870B29ED6BE7004D3F4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				879E870A29ED6BE7004D3F4D /* TableViewWithCheckbox.app */,
+				879E872329ED6BEC004D3F4D /* TableViewWithCheckboxTests.xctest */,
+				879E872D29ED6BEC004D3F4D /* TableViewWithCheckboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		879E870C29ED6BE7004D3F4D /* TableViewWithCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				879E870D29ED6BE7004D3F4D /* AppDelegate.swift */,
+				879E870F29ED6BE7004D3F4D /* SceneDelegate.swift */,
+				879E871129ED6BE7004D3F4D /* ViewController.swift */,
+				879E871329ED6BE7004D3F4D /* Main.storyboard */,
+				879E871929ED6BEB004D3F4D /* Assets.xcassets */,
+				879E871B29ED6BEB004D3F4D /* LaunchScreen.storyboard */,
+				879E871E29ED6BEB004D3F4D /* Info.plist */,
+				879E871629ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodeld */,
+			);
+			path = TableViewWithCheckbox;
+			sourceTree = "<group>";
+		};
+		879E872629ED6BEC004D3F4D /* TableViewWithCheckboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				879E872729ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift */,
+			);
+			path = TableViewWithCheckboxTests;
+			sourceTree = "<group>";
+		};
+		879E873029ED6BEC004D3F4D /* TableViewWithCheckboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				879E873129ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift */,
+				879E873329ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift */,
+			);
+			path = TableViewWithCheckboxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		879E870929ED6BE7004D3F4D /* TableViewWithCheckbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879E873729ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckbox" */;
+			buildPhases = (
+				879E870629ED6BE7004D3F4D /* Sources */,
+				879E870729ED6BE7004D3F4D /* Frameworks */,
+				879E870829ED6BE7004D3F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewWithCheckbox;
+			productName = TableViewWithCheckbox;
+			productReference = 879E870A29ED6BE7004D3F4D /* TableViewWithCheckbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		879E872229ED6BEC004D3F4D /* TableViewWithCheckboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879E873A29ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckboxTests" */;
+			buildPhases = (
+				879E871F29ED6BEC004D3F4D /* Sources */,
+				879E872029ED6BEC004D3F4D /* Frameworks */,
+				879E872129ED6BEC004D3F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879E872529ED6BEC004D3F4D /* PBXTargetDependency */,
+			);
+			name = TableViewWithCheckboxTests;
+			productName = TableViewWithCheckboxTests;
+			productReference = 879E872329ED6BEC004D3F4D /* TableViewWithCheckboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		879E872C29ED6BEC004D3F4D /* TableViewWithCheckboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879E873D29ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckboxUITests" */;
+			buildPhases = (
+				879E872929ED6BEC004D3F4D /* Sources */,
+				879E872A29ED6BEC004D3F4D /* Frameworks */,
+				879E872B29ED6BEC004D3F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879E872F29ED6BEC004D3F4D /* PBXTargetDependency */,
+			);
+			name = TableViewWithCheckboxUITests;
+			productName = TableViewWithCheckboxUITests;
+			productReference = 879E872D29ED6BEC004D3F4D /* TableViewWithCheckboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		879E870229ED6BE7004D3F4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					879E870929ED6BE7004D3F4D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					879E872229ED6BEC004D3F4D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 879E870929ED6BE7004D3F4D;
+					};
+					879E872C29ED6BEC004D3F4D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 879E870929ED6BE7004D3F4D;
+					};
+				};
+			};
+			buildConfigurationList = 879E870529ED6BE7004D3F4D /* Build configuration list for PBXProject "TableViewWithCheckbox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 879E870129ED6BE7004D3F4D;
+			productRefGroup = 879E870B29ED6BE7004D3F4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				879E870929ED6BE7004D3F4D /* TableViewWithCheckbox */,
+				879E872229ED6BEC004D3F4D /* TableViewWithCheckboxTests */,
+				879E872C29ED6BEC004D3F4D /* TableViewWithCheckboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		879E870829ED6BE7004D3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879E871D29ED6BEB004D3F4D /* LaunchScreen.storyboard in Resources */,
+				879E871A29ED6BEB004D3F4D /* Assets.xcassets in Resources */,
+				879E875329EE5A76004D3F4D /* descTableViewCell.xib in Resources */,
+				879E874B29EDAF76004D3F4D /* CustomLaunchScreen.storyboard in Resources */,
+				879E874F29EDB85F004D3F4D /* TableVC.storyboard in Resources */,
+				879E871529ED6BE7004D3F4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E872129ED6BEC004D3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E872B29ED6BEC004D3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		879E870629ED6BE7004D3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879E875229EE5A75004D3F4D /* descTableViewCell.swift in Sources */,
+				879E871829ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodeld in Sources */,
+				879E871229ED6BE7004D3F4D /* ViewController.swift in Sources */,
+				879E870E29ED6BE7004D3F4D /* AppDelegate.swift in Sources */,
+				879E874D29EDB84D004D3F4D /* TableVC.swift in Sources */,
+				879E871029ED6BE7004D3F4D /* SceneDelegate.swift in Sources */,
+				879E875529EE5EDB004D3F4D /* DescriptionModel.swift in Sources */,
+				879E874929EDAF63004D3F4D /* CustomLaunchScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E871F29ED6BEC004D3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879E872829ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879E872929ED6BEC004D3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879E873229ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift in Sources */,
+				879E873429ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		879E872529ED6BEC004D3F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 879E870929ED6BE7004D3F4D /* TableViewWithCheckbox */;
+			targetProxy = 879E872429ED6BEC004D3F4D /* PBXContainerItemProxy */;
+		};
+		879E872F29ED6BEC004D3F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 879E870929ED6BE7004D3F4D /* TableViewWithCheckbox */;
+			targetProxy = 879E872E29ED6BEC004D3F4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		879E871329ED6BE7004D3F4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				879E871429ED6BE7004D3F4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		879E871B29ED6BEB004D3F4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				879E871C29ED6BEB004D3F4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		879E873529ED6BEC004D3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		879E873629ED6BEC004D3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		879E873829ED6BEC004D3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TableViewWithCheckbox/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		879E873929ED6BEC004D3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TableViewWithCheckbox/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		879E873B29ED6BEC004D3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewWithCheckbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TableViewWithCheckbox";
+			};
+			name = Debug;
+		};
+		879E873C29ED6BEC004D3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewWithCheckbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TableViewWithCheckbox";
+			};
+			name = Release;
+		};
+		879E873E29ED6BEC004D3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewWithCheckbox;
+			};
+			name = Debug;
+		};
+		879E873F29ED6BEC004D3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TableViewWithCheckboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewWithCheckbox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		879E870529ED6BE7004D3F4D /* Build configuration list for PBXProject "TableViewWithCheckbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879E873529ED6BEC004D3F4D /* Debug */,
+				879E873629ED6BEC004D3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879E873729ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879E873829ED6BEC004D3F4D /* Debug */,
+				879E873929ED6BEC004D3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879E873A29ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879E873B29ED6BEC004D3F4D /* Debug */,
+				879E873C29ED6BEC004D3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879E873D29ED6BEC004D3F4D /* Build configuration list for PBXNativeTarget "TableViewWithCheckboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879E873E29ED6BEC004D3F4D /* Debug */,
+				879E873F29ED6BEC004D3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		879E871629ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				879E871729ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodel */,
+			);
+			currentVersion = 879E871729ED6BE7004D3F4D /* TableViewWithCheckbox.xcdatamodel */;
+			path = TableViewWithCheckbox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 879E870229ED6BE7004D3F4D /* Project object */;
+}
