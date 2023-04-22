@@ -1,0 +1,6 @@
+framework module Pods_TableViewWithCheckbox {
+  umbrella header "Pods-TableViewWithCheckbox-umbrella.h"
+
+  export *
+  module * { export * }
+}

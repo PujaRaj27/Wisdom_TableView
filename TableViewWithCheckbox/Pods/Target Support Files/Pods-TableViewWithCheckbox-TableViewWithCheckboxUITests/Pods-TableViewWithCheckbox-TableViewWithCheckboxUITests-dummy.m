@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_TableViewWithCheckbox_TableViewWithCheckboxUITests : NSObject
+@end
+@implementation PodsDummy_Pods_TableViewWithCheckbox_TableViewWithCheckboxUITests
+@end

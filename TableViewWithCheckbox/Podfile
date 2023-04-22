@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TableViewWithCheckbox' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TableViewWithCheckbox
+    pod 'Kingfisher', '~> 7.0'
+
+  target 'TableViewWithCheckboxTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TableViewWithCheckboxUITests' do
+    # Pods for testing
+  end
+
+end
