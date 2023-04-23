@@ -9,15 +9,15 @@ import Foundation
 
 
 protocol MoviesServiceProtocol {
-    func getMovies(completion: @escaping (_ success: Bool, _ results: Movies?, _ error: String?) -> ())
+    func getMovies(pageNumber: Int,completion: @escaping (_ success: Bool, _ results: Movies?, _ error: String?) -> ())
 }
 
 class MoviesService: MoviesServiceProtocol {
 
-    var page = 1
-    func getMovies(completion: @escaping (Bool, Movies?, String?) -> ()) {
+   
+    func getMovies(pageNumber : Int,completion: @escaping (Bool, Movies?, String?) -> ()) {
 
-        HttpRequestHelper().GET(url: "https://www.episodate.com/api/most-popular?", params: ["": ""], httpHeader: .application_json) { success, data in
+        HttpRequestHelper().GET(url: "https://www.episodate.com/api/most-popular?", params: ["page": "\(pageNumber)"], httpHeader: .application_json) { success, data in
             if success {
                 do {
                     let str = String(decoding: data!, as: UTF8.self)

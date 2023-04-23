@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="17" id="LGn-wd-BTx"/>
                                     <constraint firstAttribute="width" constant="212" id="bsQ-gQ-2vm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -77,6 +77,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkboxBtn" destination="uM7-gc-pgd" id="RhQ-Z2-oAl"/>
                 <outlet property="descLabel" destination="U4r-IS-eSR" id="2Oe-gV-qw4"/>
                 <outlet property="profileImage" destination="0U6-5C-RiN" id="U5K-Oj-BcJ"/>
                 <outlet property="titleLabel" destination="wVF-H3-czB" id="4Cn-mF-G61"/>

@@ -13,6 +13,8 @@ class MoviesViewModel: NSObject {
     
     var reloadTableView: (() -> Void)?
     
+    var isLoadingMovies: Bool = false
+    
     var movies : Movies?
     
     var movieCellViewModels = [MovieCellViewModel]() {
@@ -25,23 +27,30 @@ class MoviesViewModel: NSObject {
         self.movieService = movieService
     }
     
-    func getMovies() {
-        movieService.getMovies { success, model, error in
+    func getMovies(pageNumber : Int) {
+        self.isLoadingMovies = true
+        movieService.getMovies(pageNumber: pageNumber) { success, model, error in
             if success, let movies = model {
-                self.fetchData(movies: movies)
+                self.fetchData(movies: movies ,pageNumber: pageNumber)
+                
             } else {
-                print("Error :ViewModel==\(String(describing: error))")//(error!)
+                self.isLoadingMovies = false
+                print("Error :ViewModel==\(String(describing: error))")
             }
         }
     }
     
-    func fetchData(movies: Movies) {
-        self.movies = movies // Cache
+    func fetchData(movies: Movies,pageNumber : Int) {
+        self.movies = movies
+        self.movies?.page = pageNumber
         var vms = [MovieCellViewModel]()
 
         vms.append(createCellModel(movie: self.movies!))
 
         movieCellViewModels = vms
+        
+        self.isLoadingMovies = false
+        
     }
     
     func createCellModel(movie: MoviesModel) -> MovieCellViewModel {

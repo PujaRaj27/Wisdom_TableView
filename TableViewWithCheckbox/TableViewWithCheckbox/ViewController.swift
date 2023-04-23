@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     lazy var viewModel = {
         MoviesViewModel()
     }()
+    private let refreshControl = UIRefreshControl()
+    var currentPage : Int = 1
+    var isLoadingList : Bool = false
     
     var descriptionModel = [DescriptionModel]()
     override func viewDidLoad() {
@@ -28,11 +31,20 @@ class ViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
        // descriptionModel.append(DescriptionModel(title: "Hello", isSelected: false,description: "How are you? I am fine.Thank you.will Call you later", image: UIImage(named: "images.png")))
         initViewModel()
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshMovieData(_:)), for: .valueChanged)
+       
     }
     
     func initViewModel() {
         // Get employees data
-        viewModel.getMovies()
+       // var pageNumber = viewModel.movies?.page ?? 1
+//        viewModel.getMovies(pageNumber: currentPage)
+       
         
         // Reload TableView closure
         viewModel.reloadTableView = { [weak self] in
@@ -40,11 +52,47 @@ class ViewController: UIViewController {
                 self?.tableView.reloadData()
             }
         }
+        
+        self.loadMoreItemsForList()
+        
+        self.refreshControl.endRefreshing()
+        
     }
-
-
+    
+    @objc private func refreshMovieData(_ sender: Any) {
+        // Fetch Movie Data
+        initViewModel()
+    }
+//    func getListFromServer(){
+//        viewModel.getMovies(pageNumber: currentPage)
+//        //self.tableView.reloadData()
+//        self.isLoadingList = false
+//    }
+//
+//       func loadMoreItemsForList(){
+//          // viewModel.movies?.page =  (viewModel.movies?.page)! + 1//currentPage += 1
+//            currentPage += 1
+//           getListFromServer()
+//       }
+    
+    func getListFromServer(_ pageNumber: Int){
+        
+            print("getListFromServer=>getMovies=>pageNumber=\(pageNumber)")
+            viewModel.getMovies(pageNumber: currentPage)
+//        self.isLoadingList = viewModel.isLoadingMovies
+        print("getListFromServer=>reloadData")
+            self.tableView.reloadData()
+        }
+    
+    func loadMoreItemsForList(){
+           currentPage += 1
+           getListFromServer(currentPage)
+       }
+    
+       
 }
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.movies?.tvShows?.count ?? 0//descriptionModel.count
     }
@@ -55,9 +103,6 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         var data = viewModel.movies?.tvShows?[indexPath.row]
         cell.titleLabel.text = data?.name
         cell.descLabel.text = data?.permalink
-        
-        //let url = URL(string: (data?.imageThumbnailPath)!)
-       // let data1 = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         cell.profileImage.layer.cornerRadius = 5
         
         let url = URL(string: (data?.imageThumbnailPath)!)
@@ -71,10 +116,31 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         return 80
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollViewDidScroll=>contentOffset.y=\(scrollView.contentOffset.y)")
+        print("scrollViewDidScroll=>frame.size.height=\(scrollView.frame.size.height)")
+        print("scrollViewDidScroll=>contentSize.height=\(scrollView.contentSize.height)")
+        print("scrollViewDidScroll=>viewModel.isLoadingMovies=\(viewModel.isLoadingMovies)")
+            if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !viewModel.isLoadingMovies){
+                print("scrollViewDidScroll==true")
+                viewModel.isLoadingMovies = true
+                self.loadMoreItemsForList()
+            }
+        }
     
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("scrollView.contentOffset.y==\(scrollView.contentOffset.y)")
+//        print("scrollView.frame.size.height==\(scrollView.frame.size.height)")
+//        print("scrollView.contentSize.height==\(scrollView.contentSize.height)")
+//        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList){
+//            print("scrollViewDidScroll:True")
+//                self.isLoadingList = true
+//                self.loadMoreItemsForList()
+//
+//            }
+//        }
     
-    
-    
+
     
     
 }
