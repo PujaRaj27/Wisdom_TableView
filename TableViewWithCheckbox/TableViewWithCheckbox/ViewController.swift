@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var isLoadingList : Bool = false
     var selectedIndex : IndexPath?
     
-    var descriptionModel = [DescriptionModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
@@ -65,8 +65,8 @@ class ViewController: UIViewController {
 //
     func getListFromServer(_ pageNumber: Int){
 
-            print("getListFromServer=>getMovies=>pageNumber=\(pageNumber)")
-            viewModel.getMovies(pageNumber: currentPage)
+        print("getListFromServer=>getMovies=>pageNumber=\(pageNumber)")
+        viewModel.getMovies(pageNumber: currentPage)
         print("getListFromServer=>reloadData")
         self.tableView.reloadData()
         }
@@ -77,7 +77,6 @@ class ViewController: UIViewController {
        }
     
     @IBAction func btnSelectRadioAction(_ sender: UIButton) {
-     print("Button Tap")
         let inx = sender.tag
   
                  let tag = sender.tag
