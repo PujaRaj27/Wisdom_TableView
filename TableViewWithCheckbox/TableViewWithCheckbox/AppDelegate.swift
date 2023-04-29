@@ -15,36 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //SplashScreenTiming()
-        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        let vc =  CustomLaunchScreen()
-//        let navigationController = UINavigationController(rootViewController: vc)
-//        navigationController.navigationBar.isTranslucent = false
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
-        
-        
-      
+     
         return true
     }
     
-//    private func SplashScreenTiming(){
-//
-//        let LunchScreenVC = UIStoryboard.init(name: "CustomLaunchScreen", bundle: nil)
-//        let rootVc = LunchScreenVC.instantiateViewController(withIdentifier: "CustomLaunchScreen")
-//
-//        self.window?.rootViewController = rootVc
-//        self.window?.makeKeyAndVisible()
-//        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(DismissSpalshController), userInfo: nil, repeats: false)
-//    }
-//    @objc func DismissSpalshController(){
-//        let mainVC = UIStoryboard.init(name: "Main", bundle: nil)
-//        let rootvc = mainVC.instantiateViewController(withIdentifier: "TableVC")
-//        self.window?.rootViewController = rootvc
-//        self.window?.makeKeyAndVisible()
-//
-//    }
+
     
     
     

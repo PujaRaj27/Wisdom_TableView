@@ -11,17 +11,19 @@ typealias Movies = MoviesModel
 
 // MARK: - Employee
 struct MoviesModel: Codable {
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String,CodingKey {
       case total = "total"
       case tvShows = "tv_shows"
       case pages = "pages"
       case page = "page"
+      
     }
 
     var total: String?
     var tvShows: [TvShows]?
     var pages: Int?
     var page: Int?
+ 
 
 
 

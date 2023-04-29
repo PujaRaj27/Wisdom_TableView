@@ -11,12 +11,14 @@ import Kingfisher
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var checkboxStates = [Int: Bool]()
     lazy var viewModel = {
         MoviesViewModel()
     }()
     private let refreshControl = UIRefreshControl()
     var currentPage : Int = 1
     var isLoadingList : Bool = false
+    var selectedIndex : IndexPath?
     
     var descriptionModel = [DescriptionModel]()
     override func viewDidLoad() {
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "descTableViewCell", bundle: nil), forCellReuseIdentifier: "descTableViewCell")
         tableView.showsVerticalScrollIndicator = false
-       // descriptionModel.append(DescriptionModel(title: "Hello", isSelected: false,description: "How are you? I am fine.Thank you.will Call you later", image: UIImage(named: "images.png")))
+      
         initViewModel()
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -41,10 +43,7 @@ class ViewController: UIViewController {
     }
     
     func initViewModel() {
-        // Get employees data
-       // var pageNumber = viewModel.movies?.page ?? 1
-//        viewModel.getMovies(pageNumber: currentPage)
-       
+
         
         // Reload TableView closure
         viewModel.reloadTableView = { [weak self] in
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
             }
         }
         
-        self.loadMoreItemsForList()
+       self.loadMoreItemsForList()
         
         self.refreshControl.endRefreshing()
         
@@ -63,38 +62,49 @@ class ViewController: UIViewController {
         // Fetch Movie Data
         initViewModel()
     }
-//    func getListFromServer(){
-//        viewModel.getMovies(pageNumber: currentPage)
-//        //self.tableView.reloadData()
-//        self.isLoadingList = false
-//    }
 //
-//       func loadMoreItemsForList(){
-//          // viewModel.movies?.page =  (viewModel.movies?.page)! + 1//currentPage += 1
-//            currentPage += 1
-//           getListFromServer()
-//       }
-    
     func getListFromServer(_ pageNumber: Int){
-        
+
             print("getListFromServer=>getMovies=>pageNumber=\(pageNumber)")
             viewModel.getMovies(pageNumber: currentPage)
-//        self.isLoadingList = viewModel.isLoadingMovies
         print("getListFromServer=>reloadData")
-            self.tableView.reloadData()
+        self.tableView.reloadData()
         }
-    
+
     func loadMoreItemsForList(){
            currentPage += 1
            getListFromServer(currentPage)
        }
     
+    @IBAction func btnSelectRadioAction(_ sender: UIButton) {
+     print("Button Tap")
+        let inx = sender.tag
+  
+                 let tag = sender.tag
+                if let checkboxState = checkboxStates[tag] {
+                    checkboxStates[tag] = !checkboxState
+                } else {
+                    checkboxStates[tag] = true
+                }
+                
+        let checkboxImage = checkboxStates[tag]! ? UIImage(named: "ic_Select") : UIImage(named: "ic_radioEmpty")
+                sender.setImage(checkboxImage, for: .normal)
+        
+                   tableView.reloadData()
+             
+    }
+    
+    private var selectedMovie: Int? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
        
 }
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.movies?.tvShows?.count ?? 0//descriptionModel.count
+        return viewModel.movies?.tvShows?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,11 +114,20 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         cell.titleLabel.text = data?.name
         cell.descLabel.text = data?.permalink
         cell.profileImage.layer.cornerRadius = 5
-        
+
         let url = URL(string: (data?.imageThumbnailPath)!)
         // this downloads the image asynchronously if it's not cached yet
         cell.profileImage.kf.setImage(with: url)
+
+        cell.checkboxBtn.addTarget(self, action: #selector(btnSelectRadioAction(_:)), for: .touchUpInside)
+        cell.checkboxBtn.tag = indexPath.row
         
+        if let checkboxState = checkboxStates[indexPath.row] {
+                   let checkboxImage = checkboxState ? UIImage(named: "check-mark") : UIImage(named: "ic_radioEmpty")
+                   cell.checkboxBtn.setImage(checkboxImage, for: .normal)
+               } else {
+                   cell.checkboxBtn.setImage(UIImage(named: "ic_radioEmpty"), for: .normal)
+               }
         
         return cell
     }
@@ -116,32 +135,20 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         return 80
     }
     
+    private func updateSelectedIndex(_ index: Int) {
+        selectedMovie = index
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollViewDidScroll=>contentOffset.y=\(scrollView.contentOffset.y)")
-        print("scrollViewDidScroll=>frame.size.height=\(scrollView.frame.size.height)")
-        print("scrollViewDidScroll=>contentSize.height=\(scrollView.contentSize.height)")
-        print("scrollViewDidScroll=>viewModel.isLoadingMovies=\(viewModel.isLoadingMovies)")
+     
             if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !viewModel.isLoadingMovies){
                 print("scrollViewDidScroll==true")
                 viewModel.isLoadingMovies = true
                 self.loadMoreItemsForList()
             }
         }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print("scrollView.contentOffset.y==\(scrollView.contentOffset.y)")
-//        print("scrollView.frame.size.height==\(scrollView.frame.size.height)")
-//        print("scrollView.contentSize.height==\(scrollView.contentSize.height)")
-//        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList){
-//            print("scrollViewDidScroll:True")
-//                self.isLoadingList = true
-//                self.loadMoreItemsForList()
-//
-//            }
-//        }
-    
 
-    
+
     
 }
 

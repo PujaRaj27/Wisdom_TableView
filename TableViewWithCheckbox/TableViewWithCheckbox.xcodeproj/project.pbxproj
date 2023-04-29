@@ -18,10 +18,6 @@
 		879E872829ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E872729ED6BEC004D3F4D /* TableViewWithCheckboxTests.swift */; };
 		879E873229ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E873129ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift */; };
 		879E873429ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E873329ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift */; };
-		879E874929EDAF63004D3F4D /* CustomLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */; };
-		879E874B29EDAF76004D3F4D /* CustomLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */; };
-		879E874D29EDB84D004D3F4D /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E874C29EDB84D004D3F4D /* TableVC.swift */; };
-		879E874F29EDB85F004D3F4D /* TableVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879E874E29EDB85F004D3F4D /* TableVC.storyboard */; };
 		879E875229EE5A75004D3F4D /* descTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E875029EE5A75004D3F4D /* descTableViewCell.swift */; };
 		879E875329EE5A76004D3F4D /* descTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879E875129EE5A75004D3F4D /* descTableViewCell.xib */; };
 		879E875529EE5EDB004D3F4D /* DescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E875429EE5EDB004D3F4D /* DescriptionModel.swift */; };
@@ -70,10 +66,6 @@
 		879E872D29ED6BEC004D3F4D /* TableViewWithCheckboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewWithCheckboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879E873129ED6BEC004D3F4D /* TableViewWithCheckboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCheckboxUITests.swift; sourceTree = "<group>"; };
 		879E873329ED6BEC004D3F4D /* TableViewWithCheckboxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCheckboxUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLaunchScreen.swift; sourceTree = "<group>"; };
-		879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomLaunchScreen.storyboard; sourceTree = "<group>"; };
-		879E874C29EDB84D004D3F4D /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
-		879E874E29EDB85F004D3F4D /* TableVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableVC.storyboard; sourceTree = "<group>"; };
 		879E875029EE5A75004D3F4D /* descTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descTableViewCell.swift; sourceTree = "<group>"; };
 		879E875129EE5A75004D3F4D /* descTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descTableViewCell.xib; sourceTree = "<group>"; };
 		879E875429EE5EDB004D3F4D /* DescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionModel.swift; sourceTree = "<group>"; };
@@ -129,10 +121,6 @@
 				879E875429EE5EDB004D3F4D /* DescriptionModel.swift */,
 				879E875029EE5A75004D3F4D /* descTableViewCell.swift */,
 				879E875129EE5A75004D3F4D /* descTableViewCell.xib */,
-				879E874E29EDB85F004D3F4D /* TableVC.storyboard */,
-				879E874C29EDB84D004D3F4D /* TableVC.swift */,
-				879E874A29EDAF76004D3F4D /* CustomLaunchScreen.storyboard */,
-				879E874829EDAF63004D3F4D /* CustomLaunchScreen.swift */,
 				879E870C29ED6BE7004D3F4D /* TableViewWithCheckbox */,
 				879E872629ED6BEC004D3F4D /* TableViewWithCheckboxTests */,
 				879E873029ED6BEC004D3F4D /* TableViewWithCheckboxUITests */,
@@ -228,7 +216,6 @@
 				FD9A07448B271E303CD12806 /* Pods-TableViewWithCheckboxTests.debug.xcconfig */,
 				C4F901FE0744DF9621089BB9 /* Pods-TableViewWithCheckboxTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -354,8 +341,6 @@
 				879E871D29ED6BEB004D3F4D /* LaunchScreen.storyboard in Resources */,
 				879E871A29ED6BEB004D3F4D /* Assets.xcassets in Resources */,
 				879E875329EE5A76004D3F4D /* descTableViewCell.xib in Resources */,
-				879E874B29EDAF76004D3F4D /* CustomLaunchScreen.storyboard in Resources */,
-				879E874F29EDB85F004D3F4D /* TableVC.storyboard in Resources */,
 				879E871529ED6BE7004D3F4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,10 +479,8 @@
 				879E87F029F3D8CA004D3F4D /* TvShows.swift in Sources */,
 				879E870E29ED6BE7004D3F4D /* AppDelegate.swift in Sources */,
 				879E87F529F3D914004D3F4D /* MovieCellViewModel.swift in Sources */,
-				879E874D29EDB84D004D3F4D /* TableVC.swift in Sources */,
 				879E871029ED6BE7004D3F4D /* SceneDelegate.swift in Sources */,
 				879E875529EE5EDB004D3F4D /* DescriptionModel.swift in Sources */,
-				879E874929EDAF63004D3F4D /* CustomLaunchScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +661,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewWithCheckbox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
@@ -706,6 +690,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewWithCheckbox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;

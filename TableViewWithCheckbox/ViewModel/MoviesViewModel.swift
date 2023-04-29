@@ -17,6 +17,8 @@ class MoviesViewModel: NSObject {
     
     var movies : Movies?
     
+    var tvShowsDic = [Int : TvShows]()
+    
     var movieCellViewModels = [MovieCellViewModel]() {
         didSet {
             reloadTableView?()
@@ -41,7 +43,18 @@ class MoviesViewModel: NSObject {
     }
     
     func fetchData(movies: Movies,pageNumber : Int) {
-        self.movies = movies
+        if self.movies == nil{
+            self.movies = movies
+        }
+
+        self.movies?.tvShows?.append(contentsOf: movies.tvShows!)
+       // self.movies?.tvShows?.append(movies.tvShows)
+        
+        self.movies?.tvShows?.forEach({ tv in
+            self.tvShowsDic[tv.id!] = tv
+        })
+        
+
         self.movies?.page = pageNumber
         var vms = [MovieCellViewModel]()
 
